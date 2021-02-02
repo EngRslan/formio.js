@@ -436,24 +436,24 @@ export default class WebformBuilder extends Component {
   get defaultGroups() {
     return {
       basic: {
-        title: 'Basic',
+        title: 'الادوات الاساسية',
         weight: 0,
         default: true,
       },
       advanced: {
-        title: 'Advanced',
+        title: 'الادوات المتقدمة',
         weight: 10
       },
       layout: {
-        title: 'Layout',
+        title: 'ادوات البناء',
         weight: 20
       },
       data: {
-        title: 'Data',
+        title: 'ادوات البيانات',
         weight: 30
       },
       premium: {
-        title: 'Premium',
+        title: 'الادوات الاحترافية',
         weight: 40
       },
     };

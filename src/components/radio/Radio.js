@@ -7,7 +7,7 @@ export default class RadioComponent extends Field {
     return Field.schema({
       type: 'radio',
       inputType: 'radio',
-      label: 'Radio',
+      label: 'خيار من متعدد',
       key: 'radio',
       values: [{ label: '', value: '' }],
       fieldSet: false
@@ -16,9 +16,9 @@ export default class RadioComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Radio',
+      title: 'خيار من متعدد',
       group: 'basic',
-      icon: 'dot-circle-o',
+      icon: 'dot-circle',
       weight: 80,
       documentation: '/userguide/#radio',
       schema: RadioComponent.schema()

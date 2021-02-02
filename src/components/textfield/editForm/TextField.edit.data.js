@@ -1,24 +1,24 @@
 export default [
   {
     type: 'select',
-    label: 'Input Format',
+    label: 'نوع المدخلات',
     key: 'inputFormat',
     weight: 105,
-    placeholder: 'Input Format',
-    tooltip: 'Force the output of this field to be sanitized in a specific format.',
+    placeholder: 'نوع المدخلات',
+    tooltip: 'نوع المدخلات يحدد طريقة عرض المدخل فى شاشة المستخدم',
     template: '<span>{{ item.label }}</span>',
     data: {
       values: [
         {
           value: 'plain',
-          label: 'Plain'
+          label: 'نصي'
         },
         {
           value: 'html',
           label: 'HTML'
         },{
           value: 'raw',
-          label: 'Raw (Insecure)'
+          label: 'قابل للتنفيذ (غير آمن)'
         }
       ]
     },
@@ -28,21 +28,21 @@ export default [
   {
     weight: 200,
     type: 'radio',
-    label: 'Text Case',
+    label: 'حالة النص',
     key: 'case',
-    tooltip: 'When data is entered, you can change the case of the value.',
+    tooltip: 'تغير حالة الاحرف فى الحروف اللاتنية',
     input: true,
     values: [
       {
         value: 'mixed',
-        label: 'Mixed (Allow upper and lower case)'
+        label: 'مختلط (السماح بالاحرف الكبيرة و الصغيرة)'
       },
       {
         value: 'uppercase',
-        label: 'Uppercase'
+        label: 'احرف كبيرة'
       },{
         value: 'lowercase',
-        label: 'Lowercase'
+        label: 'احرف صعيرة'
       }
     ]
   },

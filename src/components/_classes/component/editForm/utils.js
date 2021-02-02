@@ -93,7 +93,7 @@ const EditFormUtils = {
             {
               type: 'htmlelement',
               tag: 'div',
-              content: `<p>Enter custom javascript code.</p>${exampleHTML}`
+              content: `<p>ادخل كود javascript</p>${exampleHTML}`
             }
           ]
         },
@@ -108,8 +108,8 @@ const EditFormUtils = {
               type: 'htmlelement',
               tag: 'div',
               /* eslint-disable prefer-template */
-              content: '<p>Execute custom logic using <a href="http://jsonlogic.com/" target="_blank">JSONLogic</a>.</p>' +
-                '<p>Full <a href="https://lodash.com/docs" target="_blank">Lodash</a> support is provided using an "_" before each operation, such as <code>{"_sum": {var: "data.a"}}</code></p>' +
+              content: '<p>انشاء الشروط باستخدام <a href="http://jsonlogic.com/" target="_blank">JSONLogic</a>.</p>' +
+                '<p>للمزيد <a href="https://lodash.com/docs" target="_blank">Lodash</a> يتم تفعيلها باستخدام "_" قبل اي عملية, مثل <code>{"_sum": {var: "data.a"}}</code></p>' +
                  exampleJSON
               /* eslint-enable prefer-template */
             },

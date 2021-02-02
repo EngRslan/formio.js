@@ -2,46 +2,46 @@ export default [
   {
     weight: 110,
     key: 'validate.minLength',
-    label: 'Minimum Length',
-    placeholder: 'Minimum Length',
+    label: 'الحد الادنى للحروف',
+    placeholder: 'الحد الادنى لعدد الحروف المسموح',
     type: 'number',
-    tooltip: 'The minimum length requirement this field must meet.',
+    tooltip: 'اقل عدد من الحروف المسموح بها فى هذا الحقل',
     input: true
   },
   {
     weight: 120,
     key: 'validate.maxLength',
-    label: 'Maximum Length',
-    placeholder: 'Maximum Length',
+    label: 'الحد الاعلى للحروف',
+    placeholder: 'الحد الاعلى للحروف المسموحة',
     type: 'number',
-    tooltip: 'The maximum length requirement this field must meet.',
+    tooltip: 'تحديد الحد الاعلى لعدد الحروف المسموح بها فى الحقل.',
     input: true
   },
   {
     weight: 125,
     key: 'validate.minWords',
-    label: 'Minimum Word Length',
-    placeholder: 'Minimum Word Length',
+    label: 'الحد الادني للكلمات',
+    placeholder: 'الحد الادني لعدد الكلمات',
     type: 'number',
-    tooltip: 'The minimum amount of words that can be added to this field.',
+    tooltip: 'الحد الادنى لعدد الكلمات المسموح بها فى هذا الحقل',
     input: true
   },
   {
     weight: 126,
     key: 'validate.maxWords',
-    label: 'Maximum Word Length',
-    placeholder: 'Maximum Word Length',
+    label: 'الحد الاعلى الكلمات',
+    placeholder: 'الحد الاعلى لعدد الكلمات',
     type: 'number',
-    tooltip: 'The maximum amount of words that can be added to this field.',
+    tooltip: 'الحد الاعلى لعدد الكلمات المسموح بها فى هذا الحقل',
     input: true
   },
   {
     weight: 130,
     key: 'validate.pattern',
-    label: 'Regular Expression Pattern',
-    placeholder: 'Regular Expression Pattern',
+    label: 'تعبير قياسي REGEX',
+    placeholder: 'تعبير قياسي REGEX',
     type: 'textfield',
-    tooltip: 'The regular expression pattern test that the field value must pass before the form can be submitted.',
+    tooltip: 'التعبير القياسي الذي مكن استخدامه للنحق من المدخل الصحيح',
     input: true
   }
 ];

@@ -6,7 +6,7 @@ export default [
   {
     weight: 0,
     input: true,
-    label: 'Advanced Logic',
+    label: 'معيار متقدم',
     key: 'logic',
     templates: {
       header: '<div class="row"> \n  <div class="col-sm-6">\n    <strong>{{ value.length }} {{ ctx.t("Advanced Logic Configured") }}</strong>\n  </div>\n</div>',
@@ -14,14 +14,14 @@ export default [
       footer: '',
     },
     type: 'editgrid',
-    addAnother: 'Add Logic',
-    saveRow: 'Save Logic',
+    addAnother: 'اضافة معيار',
+    saveRow: 'حفظ المعيار',
     components: [
       {
         weight: 0,
         input: true,
         inputType: 'text',
-        label: 'Logic Name',
+        label: 'الاسم',
         key: 'name',
         validate: {
           required: true,
@@ -32,7 +32,7 @@ export default [
         weight: 10,
         key: 'triggerPanel',
         input: false,
-        title: 'Trigger',
+        title: 'المنفذ',
         tableView: false,
         components: [
           {
@@ -43,14 +43,14 @@ export default [
               {
                 weight: 0,
                 input: true,
-                label: 'Type',
+                label: 'النوع',
                 key: 'type',
                 tableView: false,
                 data: {
                   values: [
                     {
                       value: 'simple',
-                      label: 'Simple',
+                      label: 'بسيط',
                     },
                     {
                       value: 'javascript',
@@ -62,7 +62,7 @@ export default [
                     },
                     {
                       value: 'event',
-                      label: 'Event',
+                      label: 'حدث',
                     },
                   ],
                 },
@@ -83,7 +83,7 @@ export default [
                   {
                     input: true,
                     key: 'show',
-                    label: 'Show',
+                    label: 'اظهار',
                     type: 'hidden',
                     tableView: false,
                     calculateValue() {
@@ -93,7 +93,7 @@ export default [
                   {
                     type: 'select',
                     input: true,
-                    label: 'When the form component:',
+                    label: 'عندما يكون الحقل :',
                     key: 'when',
                     dataSrc: 'custom',
                     valueProperty: 'value',
@@ -107,7 +107,7 @@ export default [
                   {
                     type: 'textfield',
                     input: true,
-                    label: 'Has the value:',
+                    label: 'يحتوي على القيمة',
                     key: 'eq',
                     tableView: false,
                   },
@@ -123,7 +123,7 @@ export default [
                 input: true,
                 tableView: false,
                 placeholder: `result = (data['mykey'] > 1);`,
-                description: '"row", "data", and "component" variables are available. Return "result".',
+                description: '"row"و "data" و "component" المتغيرات المتاحة. Return "result".',
                 customConditional({ row }) {
                   return row.type === 'javascript';
                 },
@@ -139,7 +139,7 @@ export default [
                 input: true,
                 tableView: false,
                 placeholder: `{ ... }`,
-                description: '"row", "data", "component" and "_" variables are available. Return the result to be passed to the action if truthy.',
+                description: '"row"و "data"و "component" و "_" المتغيرات المتاحة. اعد النتيجة الصحيحة ليتم ارسالها',
                 customConditional({ row }) {
                   return row.type === 'json';
                 },
@@ -148,9 +148,9 @@ export default [
                 weight: 10,
                 type: 'textfield',
                 key: 'event',
-                label: 'Event Name',
+                label: 'اسم الحدث',
                 placeholder: 'event',
-                description: 'The event that will trigger this logic. You can trigger events externally or via a button.',
+                description: 'الحدث الي سوف يتم اطلاقه باستخدام هذا المعيار',
                 tableView: false,
                 customConditional({ row }) {
                   return row.type === 'event';
@@ -166,7 +166,7 @@ export default [
       {
         weight: 20,
         input: true,
-        label: 'Actions',
+        label: 'الاجراءات',
         key: 'actions',
         tableView: false,
         templates: {
@@ -175,12 +175,12 @@ export default [
           footer: '',
         },
         type: 'editgrid',
-        addAnother: 'Add Action',
-        saveRow: 'Save Action',
+        addAnother: 'اضافة اجراء',
+        saveRow: 'حفظ الاجراء',
         components: [
           {
             weight: 0,
-            title: 'Action',
+            title: 'اجراء',
             input: false,
             key: 'actionPanel',
             type: 'panel',
@@ -189,7 +189,7 @@ export default [
                 weight: 0,
                 input: true,
                 inputType: 'text',
-                label: 'Action Name',
+                label: 'الاسم',
                 key: 'name',
                 validate: {
                   required: true,
@@ -199,24 +199,24 @@ export default [
               {
                 weight: 10,
                 input: true,
-                label: 'Type',
+                label: 'النوع',
                 key: 'type',
                 data: {
                   values: [
                     {
                       value: 'property',
-                      label: 'Property',
+                      label: 'خاصية',
                     },
                     {
                       value: 'value',
-                      label: 'Value',
+                      label: 'قيمة',
                     },
                     {
-                      label: 'Merge Component Schema',
+                      label: 'دمج مخطط الحقل',
                       value: 'mergeComponentSchema',
                     },
                     {
-                      label: 'Custom Action',
+                      label: 'اجراء مخصص',
                       value: 'customAction',
                     },
                   ],
@@ -234,74 +234,74 @@ export default [
                 data: {
                   json: [
                     {
-                      label: 'Hidden',
+                      label: 'مخفي',
                       value: 'hidden',
                       type: 'boolean',
                     },
                     {
-                      label: 'Required',
+                      label: 'اجباري',
                       value: 'validate.required',
                       type: 'boolean',
                     },
                     {
-                      label: 'Disabled',
+                      label: 'الغاء التفعيل',
                       value: 'disabled',
                       type: 'boolean',
                     },
                     {
-                      label: 'Label',
+                      label: 'العنوان',
                       value: 'label',
                       type: 'string',
                     },
                     {
-                      label: 'Title',
+                      label: 'العنوان الداخلي',
                       value: 'title',
                       type: 'string',
                     },
                     {
-                      label: 'Prefix',
+                      label: 'البادئة',
                       value: 'prefix',
                       type: 'string',
                     },
                     {
-                      label: 'Suffix',
+                      label: 'اللاحقة',
                       value: 'suffix',
                       type: 'string',
                     },
                     {
-                      label: 'Tooltip',
+                      label: 'التلميح',
                       value: 'tooltip',
                       type: 'string',
                     },
                     {
-                      label: 'Description',
+                      label: 'الوصف',
                       value: 'description',
                       type: 'string',
                     },
                     {
-                      label: 'Placeholder',
+                      label: 'النص المؤقت',
                       value: 'placeholder',
                       type: 'string',
                     },
                     {
-                      label: 'Input Mask',
+                      label: 'قناع الادخال',
                       value: 'inputMask',
                       type: 'string',
                     },
                     {
-                      label: 'CSS Class',
+                      label: 'CSS فئات',
                       value: 'className',
                       type: 'string',
                     },
                     {
-                      label: 'Container Custom Class',
+                      label: 'فئات مخصصة للأب',
                       value: 'customClass',
                       type: 'string',
                     },
                   ],
                 },
                 key: 'property',
-                label: 'Component Property',
+                label: 'خاصية الحقل',
                 input: true,
                 customConditional({ row }) {
                   return row.type === 'property';
@@ -310,17 +310,17 @@ export default [
               {
                 weight: 30,
                 input: true,
-                label: 'Set State',
+                label: 'وضع حالة',
                 key: 'state',
                 tableView: false,
                 data: {
                   values: [
                     {
-                      label: 'True',
+                      label: 'نعم',
                       value: 'true',
                     },
                     {
-                      label: 'False',
+                      label: 'لا',
                       value: 'false',
                     },
                   ],
@@ -342,7 +342,7 @@ export default [
                 inputType: 'text',
                 input: true,
                 tableView: false,
-                description: 'Can use templating with {{ data.myfield }}. "data", "row", "component" and "result" variables are available.',
+                description: 'يمكن استخدام متغيرات القوالب {{ data.myfield }}. "data"و "row"و "component" و "result" .',
                 customConditional({ row }) {
                   return row.type === 'property' &&
                     row.hasOwnProperty('property') &&
@@ -353,7 +353,7 @@ export default [
               {
                 weight: 20,
                 input: true,
-                label: 'Value (Javascript)',
+                label: 'القيمة (Javascript)',
                 key: 'value',
                 editor: 'ace',
                 as: 'javascript',
@@ -361,7 +361,7 @@ export default [
                 placeholder: `value = data.myfield;`,
                 type: 'textarea',
                 tableView: false,
-                description: '"row", "data", "component", and "result" variables are available. Return the value.',
+                description: '"row"و "data"و "component" و "result" المتغيرات المتاحة. يرجى ارجاع قيمة.',
                 customConditional({ row }) {
                   return row.type === 'value';
                 },
@@ -369,7 +369,7 @@ export default [
               {
                 weight: 20,
                 input: true,
-                label: 'Schema Defenition',
+                label: 'تعريف المخطط',
                 key: 'schemaDefinition',
                 editor: 'ace',
                 as: 'javascript',
@@ -377,12 +377,12 @@ export default [
                 placeholder: `schema = { label: 'Updated' };`,
                 type: 'textarea',
                 tableView: false,
-                description: '"row", "data", "component", and "result" variables are available. Return the schema.',
+                description: '"row"و "data"و "component"و "result" المتغيرات المتاحة. يرجي ارجاع المخطط.',
                 customConditional({ row }) {
                   return row.type === 'mergeComponentSchema';
                 },
                },
-              Object.assign(EditFormUtils.logicVariablesTable('<tr><th>input</th><td>The value that was input into this component</td></tr>'),
+              Object.assign(EditFormUtils.logicVariablesTable('<tr><th>input</th><td>القيمة الذي سوف يتم ادخالها لهذا الحقل</td></tr>'),
                {
                   customConditional({ row }) {
                     return row.type === 'customAction';
@@ -392,7 +392,7 @@ export default [
               {
                 weight: 20,
                 input: true,
-                label: 'Custom Action (Javascript)',
+                label: 'اجراء مخصص (Javascript)',
                 key: 'customAction',
                 editor: 'ace',
                 rows: 5,

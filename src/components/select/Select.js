@@ -14,7 +14,7 @@ export default class SelectComponent extends Field {
   static schema(...extend) {
     return Field.schema({
       type: 'select',
-      label: 'Select',
+      label: 'قائمة منسدلة',
       key: 'select',
       idPath: 'id',
       data: {
@@ -52,7 +52,7 @@ export default class SelectComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Select',
+      title: 'قائمة منسدلة',
       group: 'basic',
       icon: 'th-list',
       weight: 70,

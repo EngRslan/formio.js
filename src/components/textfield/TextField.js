@@ -5,7 +5,7 @@ import * as FormioUtils from '../../utils/utils';
 export default class TextFieldComponent extends Input {
   static schema(...extend) {
     return Input.schema({
-      label: 'Text Field',
+      label: 'نص',
       key: 'textField',
       type: 'textfield',
       mask: false,
@@ -24,7 +24,7 @@ export default class TextFieldComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Text Field',
+      title: 'نص',
       icon: 'terminal',
       group: 'basic',
       documentation: '/userguide/#textfield',

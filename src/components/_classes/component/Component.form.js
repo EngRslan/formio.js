@@ -16,43 +16,43 @@ export default function(...extend) {
       key: 'tabs',
       components: [
         {
-          label: 'Display',
+          label: 'خيارات العرض',
           key: 'display',
           weight: 0,
           components: ComponentEditDisplay
         },
         {
-          label: 'Data',
+          label: 'البيانات',
           key: 'data',
           weight: 10,
           components: ComponentEditData
         },
         {
-          label: 'Validation',
+          label: 'التحقق من المدخلات',
           key: 'validation',
           weight: 20,
           components: ComponentEditValidation
         },
         {
-          label: 'API',
+          label: 'خيارات الترابط',
           key: 'api',
           weight: 30,
           components: ComponentEditAPI
         },
         {
-          label: 'Conditional',
+          label: 'الشروط',
           key: 'conditional',
           weight: 40,
           components: ComponentEditConditional
         },
         {
-          label: 'Logic',
+          label: 'المعايير',
           key: 'logic',
           weight: 50,
           components: ComponentEditLogic
         },
         {
-          label: 'Layout',
+          label: 'خيارات البناء',
           key: 'layout',
           weight: 60,
           components: ComponentEditLayout

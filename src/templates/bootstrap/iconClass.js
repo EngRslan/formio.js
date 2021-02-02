@@ -14,7 +14,7 @@ export default (iconset, name, spinning) => {
         name = 'question-circle';
         break;
       case 'remove-circle':
-        name = 'times-circle-o';
+        name = 'times-circle';
         break;
       case 'new-window':
         name = 'window-restore';
@@ -23,7 +23,7 @@ export default (iconset, name, spinning) => {
         name = 'arrows';
         break;
       case 'time':
-        name = 'clock-o';
+        name = 'clock';
         break;
     }
   }

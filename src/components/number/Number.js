@@ -8,7 +8,7 @@ export default class NumberComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'number',
-      label: 'Number',
+      label: 'رقم',
       key: 'number',
       validate: {
         min: '',
@@ -21,7 +21,7 @@ export default class NumberComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Number',
+      title: 'رقم',
       icon: 'hashtag',
       group: 'basic',
       documentation: '/userguide/#number',

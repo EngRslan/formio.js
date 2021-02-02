@@ -4,11 +4,11 @@ export default [
     type: 'textfield',
     input: true,
     key: 'key',
-    label: 'Property Name',
-    tooltip: 'The name of this field in the API endpoint.',
+    label: 'اسم الخاصية',
+    tooltip: 'الاسم الذي سوف يتم حفظ القيمة بداخله وارسالها للخادم',
     validate: {
       pattern: '(\\w|\\w[\\w-.]*\\w)',
-      patternMessage: 'The property name must only contain alphanumeric characters, underscores, dots and dashes and should not be ended by dash or dot.',
+      patternMessage: 'اسم الخاصية يمكن ان يحتوي فقط على ارقام او حروف او شرطة سفلية او شرطة علوية او نقطة ولا يمكن ان ينتهي بشرطة علوية او نقطة',
       required: true
     }
   },
@@ -16,23 +16,25 @@ export default [
     weight: 100,
     type: 'tags',
     input: true,
-    label: 'Field Tags',
+    label: 'اوسمة الحقل',
     storeas: 'array',
-    tooltip: 'Tag the field for use in custom logic.',
+    tooltip: 'الاوسمة الذي سوف تستخدم فى صفحة المنطق',
     key: 'tags'
   },
   {
     weight: 200,
     type: 'datamap',
-    label: 'Custom Properties',
-    tooltip: 'This allows you to configure any custom properties for this component.',
+    label: 'خصائص اضافية',
+    tooltip: 'هذا يسمح لك بتكوين أي خصائص مخصصة لهذا الحقل. ',
     key: 'properties',
+    keyLabel: 'المفتاح',
     valueComponent: {
       type: 'textfield',
       key: 'value',
-      label: 'Value',
-      placeholder: 'Value',
+      label: 'القيمة',
+      placeholder: 'القيمة',
       input: true
-    }
+    },
+    addAnother: 'اضافة اخر',
   },
 ];

@@ -4,27 +4,27 @@ import { getContextComponents } from '../../../../utils/utils';
 export default [
   {
     type: 'panel',
-    title: 'Simple',
+    title: 'بسيط',
     key: 'simple-conditional',
     theme: 'default',
     components: [
       {
         type: 'select',
         input: true,
-        label: 'This component should Display:',
+        label: 'سوف يكون هذا الحقل',
         key: 'conditional.show',
         dataSrc: 'values',
         data: {
           values: [
-            { label: 'True', value: 'true' },
-            { label: 'False', value: 'false' }
+            { label: 'ظاهر', value: 'true' },
+            { label: 'مختفى', value: 'false' }
           ]
         }
       },
       {
         type: 'select',
         input: true,
-        label: 'When the form component:',
+        label: 'عندما يحتوي الحقل',
         key: 'conditional.when',
         dataSrc: 'custom',
         valueProperty: 'value',
@@ -37,16 +37,15 @@ export default [
       {
         type: 'textfield',
         input: true,
-        label: 'Has the value:',
+        label: 'على هذه القيمة',
         key: 'conditional.eq'
       }
     ]
   },
-  EditFormUtils.javaScriptValue('Advanced Conditions', 'customConditional', 'conditional.json', 110,
-    '<p>You must assign the <strong>show</strong> variable a boolean result.</p>' +
-    '<p><strong>Note: Advanced Conditional logic will override the results of the Simple Conditional logic.</strong></p>' +
-    '<h5>Example</h5><pre>show = !!data.showMe;</pre>',
-    '<p><a href="http://formio.github.io/formio.js/app/examples/conditions.html" target="_blank">Click here for an example</a></p>'
+  EditFormUtils.javaScriptValue('الشروط المتقدمة', 'customConditional', 'conditional.json', 110,
+    '<p>لابد من اعطاء المتغير <strong>show</strong> قيمة true او false.</p>' +
+    '<p><strong>ملحوظة: الشروط المتقدمة لها الاولوية على الشروط البسيطة</strong></p>' +
+    '<h5>مثال</h5><pre>show = !!data.showMe;</pre>'
   )
 ];
 /* eslint-enable quotes, max-len */

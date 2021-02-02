@@ -6,16 +6,16 @@ export default [
   {
     weight: 10,
     type: 'checkbox',
-    label: 'Required',
-    tooltip: 'A required field must be filled in before the form can be submitted.',
+    label: 'اجباري',
+    tooltip: 'الحقل الاجباري لا يمكن ارسال النموذج بدون تعبئة هذا الحقل',
     key: 'validate.required',
     input: true
   },
   {
     weight: 100,
     type: 'checkbox',
-    label: 'Unique',
-    tooltip: 'Makes sure the data submitted for this field is unique, and has not been submitted before.',
+    label: 'حقل فريد',
+    tooltip: 'جعل هذا الحقل فريد لايمكن ان يتكرر',
     key: 'unique',
     input: true
   },
@@ -25,13 +25,13 @@ export default [
     key: 'validateOn',
     defaultValue: 'change',
     input: true,
-    label: 'Validate On',
-    tooltip: 'Determines when this component should trigger front-end validation.',
+    label: 'التحقق عند',
+    tooltip: 'التحقق من المدخل عند',
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'Change', value: 'change' },
-        { label: 'Blur', value: 'blur' }
+        { label: 'التغير', value: 'change' },
+        { label: 'ترك الحقل', value: 'blur' }
       ]
     }
   },
@@ -40,22 +40,22 @@ export default [
     type: 'textfield',
     input: true,
     key: 'errorLabel',
-    label: 'Error Label',
-    placeholder: 'Error Label',
-    tooltip: 'The label for this field when an error occurs.'
+    label: 'عنوان الخطأ',
+    placeholder: 'عنوان الخطأ',
+    tooltip: 'العنوان الذي سوف ياخده الحقل عند الخطأ'
   },
   {
     weight: 200,
     key: 'validate.customMessage',
-    label: 'Custom Error Message',
-    placeholder: 'Custom Error Message',
+    label: 'رسائل اخطاء مخصصة',
+    placeholder: 'رسائل اخطاء مخصصة',
     type: 'textfield',
-    tooltip: 'Error message displayed if any error occurred.',
+    tooltip: 'رسائل الاخطاء التي ستظهر عن الخطأ',
     input: true
   },
   {
     type: 'panel',
-    title: 'Custom Validation',
+    title: 'تحقق مخصص',
     collapsible: true,
     collapsed: true,
     style: { 'margin-bottom': '10px' },
@@ -65,7 +65,7 @@ export default [
       return !Evaluator.noeval || Evaluator.protectedEval;
     },
     components: [
-      EditFormUtils.logicVariablesTable('<tr><th>input</th><td>The value that was input into this component</td></tr>'),
+      EditFormUtils.logicVariablesTable('<tr><th>input</th><td>القيمة الذي سوف يتم وضعها لهذا الحقل</td></tr>'),
       {
         type: 'textarea',
         key: 'validate.custom',
@@ -80,10 +80,10 @@ export default [
         tag: 'div',
         content: `
           <small>
-            <p>Enter custom validation code.</p>
-            <p>You must assign the <strong>valid</strong> variable as either <strong>true</strong> or an error message if validation fails.</p>
-            <h5>Example:</h5>
-            <pre>valid = (input === 'Joe') ? true : 'Your name must be "Joe"';</pre>
+            <p>ادخل رمز للتحقق المخصص</p>
+            <p>لابد وضع المتغير <strong>valid</strong> بالقيمة <strong>true</strong> او رسالة الخطأ فى حالة الخطأ.</p>
+            <h5>مثال:</h5>
+            <pre>valid = (input === 'etc') ? true : 'لابد من وضع اسمك "etc"';</pre>
           </small>`
       },
       {
@@ -104,7 +104,7 @@ export default [
   },
   {
     type: 'panel',
-    title: 'JSONLogic Validation',
+    title: 'JSONLogic التحقق بـ',
     collapsible: true,
     collapsed: true,
     key: 'json-validation-json',
@@ -114,13 +114,13 @@ export default [
         type: 'htmlelement',
         tag: 'div',
         /* eslint-disable prefer-template */
-        content: '<p>Execute custom logic using <a href="http://jsonlogic.com/" target="_blank">JSONLogic</a>.</p>' +
-          '<h5>Example:</h5>' +
+        content: '<p>تنفيذ التحقق باستخدام <a href="http://jsonlogic.com/" target="_blank">JSONLogic</a>.</p>' +
+          '<h5>مثال :</h5>' +
           '<pre>' + JSON.stringify({
             "if": [
-              { "===": [{ "var": "input" }, "Bob"] },
+              { "===": [{ "var": "input" }, "etc"] },
               true,
-              "Your name must be 'Bob'!"
+              "لابد من وضع القيمة etc"
             ]
           }, null, 2) + '</pre>'
         /* eslint-enable prefer-template */

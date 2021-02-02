@@ -5,9 +5,9 @@ export default [
     type: 'textfield',
     input: true,
     key: 'label',
-    label: 'Label',
-    placeholder: 'Field Label',
-    tooltip: 'The label for this field that will appear next to it.',
+    label: 'اسم الحقل',
+    placeholder: 'ادخل اسم الحقل',
+    tooltip: 'الاسم الظاهر للحقل',
     validate: {
       required: true
     }
@@ -16,19 +16,19 @@ export default [
     type: 'select',
     input: true,
     key: 'labelPosition',
-    label: 'Label Position',
-    tooltip: 'Position for the label for this field.',
+    label: 'موضع اسم الحقل',
+    tooltip: 'الموضع الذي سوف يظهر به عنوان الحقل',
     weight: 20,
     defaultValue: 'top',
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'Top', value: 'top' },
-        { label: 'Left (Left-aligned)', value: 'left-left' },
-        { label: 'Left (Right-aligned)', value: 'left-right' },
-        { label: 'Right (Left-aligned)', value: 'right-left' },
-        { label: 'Right (Right-aligned)', value: 'right-right' },
-        { label: 'Bottom', value: 'bottom' }
+        { label: 'الاعلى', value: 'top' },
+        { label: 'ايسر (محاذاة لليسار)', value: 'left-left' },
+        { label: 'ايسر (محاذاة لليمين)', value: 'left-right' },
+        { label: 'ايمن (محاذاة لليسار)', value: 'right-left' },
+        { label: 'ايمن (محاذاة لليمين)', value: 'right-right' },
+        { label: 'الاسفل', value: 'bottom' }
       ]
     }
   },
@@ -36,8 +36,8 @@ export default [
     type: 'number',
     input: true,
     key: 'labelWidth',
-    label: 'Label Width',
-    tooltip: 'The width of label on line in percentages.',
+    label: 'مقاس العرض',
+    tooltip: 'المساحة الذي سيستهلكها عرض الاسم من المساحة الكلية بالنسبة المؤوية',
     clearOnHide: false,
     weight: 30,
     placeholder: '30',
@@ -59,8 +59,8 @@ export default [
     type: 'number',
     input: true,
     key: 'labelMargin',
-    label: 'Label Margin',
-    tooltip: 'The width of label margin on line in percentages.',
+    label: 'الهوامش الخارجية للعنوان',
+    tooltip: 'تحديد الهوامش الخارجية للعنوان',
     clearOnHide: false,
     weight: 30,
     placeholder: '3',
@@ -83,18 +83,18 @@ export default [
     type: 'textfield',
     input: true,
     key: 'placeholder',
-    label: 'Placeholder',
-    placeholder: 'Placeholder',
-    tooltip: 'The placeholder text that will appear when this field is empty.'
+    label: 'النص الفارغ',
+    placeholder: 'ادخل النص الفارغ',
+    tooltip: 'هذا النص سوف يظهر بداخل الحقل فى حالة عندم كتابة اي معلومات من قبل المستخدم'
   },
   {
     weight: 200,
     type: 'textarea',
     input: true,
     key: 'description',
-    label: 'Description',
-    placeholder: 'Description for this field.',
-    tooltip: 'The description is text that will appear below the input field.',
+    label: 'الوصف',
+    placeholder: 'ادخل الوصف للحقل',
+    tooltip: 'هذا الوصف سوف يظهر اسفل الحقل',
     editor: 'ace',
     as: 'html',
     wysiwyg: {
@@ -107,9 +107,9 @@ export default [
     type: 'textarea',
     input: true,
     key: 'tooltip',
-    label: 'Tooltip',
-    placeholder: 'To add a tooltip to this field, enter text here.',
-    tooltip: 'Adds a tooltip to the side of this field.',
+    label: 'تلميح',
+    placeholder: 'ادخل التلميح',
+    tooltip: 'فى حالة كنت تريد عرض تلميح على هذا الحقل',
     editor: 'ace',
     as: 'html',
     wysiwyg: {
@@ -122,48 +122,48 @@ export default [
     type: 'textfield',
     input: true,
     key: 'customClass',
-    label: 'Custom CSS Class',
-    placeholder: 'Custom CSS Class',
-    tooltip: 'Custom CSS class to add to this component.'
+    label: 'فئة CSS مخصصة',
+    placeholder: 'فئة CSS مخصصة',
+    tooltip: 'فئة CSS مخصصة سوف يتم اضافتها للحقل وقت الانشاء'
   },
   {
     weight: 600,
     type: 'textfield',
     input: true,
     key: 'tabindex',
-    label: 'Tab Index',
+    label: 'اولوية التنقل',
     placeholder: '0',
-    tooltip: 'Sets the tabindex attribute of this component to override the tab order of the form. See the <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\'>MDN documentation</a> on tabindex for more information.'
+    tooltip: 'تحديد اولية التنقل بين الحقول باستخدام زر TAB انظر <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\'>الشرح</a> لمزيد من المعلومات.'
   },
   {
     weight: 1100,
     type: 'checkbox',
-    label: 'Hidden',
-    tooltip: 'A hidden field is still a part of the form, but is hidden from view.',
+    label: 'مخفى',
+    tooltip: 'هذا الحقل سيظل موجود داخل النموذك ولكنه سوف يكون مختفى',
     key: 'hidden',
     input: true
   },
   {
     weight: 1200,
     type: 'checkbox',
-    label: 'Hide Label',
-    tooltip: 'Hide the label (title, if no label) of this component. This allows you to show the label in the form builder, but not when it is rendered.',
+    label: 'اخفاء عنوان الحقل',
+    tooltip: 'سوف يتم خفاء عنوان الحقل في التصميم',
     key: 'hideLabel',
     input: true
   },
   {
     weight: 1350,
     type: 'checkbox',
-    label: 'Initial Focus',
-    tooltip: 'Make this field the initially focused element on this form.',
+    label: 'التركيز الافتراضي',
+    tooltip: 'جعل التركيز على هذا الحقل بمجرد انشاء النموذج',
     key: 'autofocus',
     input: true
   },
   {
     weight: 1370,
     type: 'checkbox',
-    label: 'Show Label in DataGrid',
-    tooltip: 'Show the label when in a Datagrid.',
+    label: 'عرض عنوان الحقل فى حقل شبكة البيانات',
+    tooltip: 'عرض عنوان الحقل فى حقل شبكة البيانات',
     key: 'dataGridLabel',
     input: true,
     customConditional(context) {
@@ -173,24 +173,24 @@ export default [
   {
     weight: 1400,
     type: 'checkbox',
-    label: 'Disabled',
-    tooltip: 'Disable the form input.',
+    label: 'الغاء تفعيله',
+    tooltip: 'الغاء تفعيل هذا الحقل',
     key: 'disabled',
     input: true
   },
   {
     weight: 1500,
     type: 'checkbox',
-    label: 'Table View',
-    tooltip: 'Shows this value within the table view of the submissions.',
+    label: 'عرض الجدول',
+    tooltip: 'عرض هذا الحقل من ضمن بيانات الجدول وقت الارسال',
     key: 'tableView',
     input: true
   },
   {
     weight: 1600,
     type: 'checkbox',
-    label: 'Modal Edit',
-    tooltip: 'Opens up a modal to edit the value of this component.',
+    label: 'تعديل منبثق',
+    tooltip: 'عرض نافذة منبثقة للتعديل على هذا الحقل',
     key: 'modalEdit',
     input: true
   },

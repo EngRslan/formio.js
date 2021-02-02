@@ -6,9 +6,9 @@ export default [
     type: 'select',
     input: true,
     key: 'widget.type',
-    label: 'Widget',
-    placeholder: 'Select a widget',
-    tooltip: 'The widget is the display UI used to input the value of the field.',
+    label: 'مساعد الحقل',
+    placeholder: 'اختر مساعد الحقل ',
+    tooltip: 'مساعد الحقل هوا عبارة عن مساعد يظهر للعميل لتوليد القيمة التي ستدخل الحقل',
     defaultValue: 'input',
     onChange: (context) => {
       context.data.widget = _.pick(context.data.widget, 'type');
@@ -16,8 +16,8 @@ export default [
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'Input Field', value: 'input' },
-        { label: 'Calendar Picker', value: 'calendar' },
+        { label: 'بدون مساعد', value: 'input' },
+        { label: 'التاريخ', value: 'calendar' },
       ]
     },
     conditional: {
@@ -28,7 +28,7 @@ export default [
     weight: 405,
     type: 'textarea',
     key: 'widget',
-    label: 'Widget Settings',
+    label: 'اعدادات المساعد',
     refreshOn: 'wiget.type',
     clearOnHide: false,
     // Deleted clearOnHide and refreshOn to make possible to change exist widget settings.
@@ -67,8 +67,8 @@ export default [
     type: 'textfield',
     input: true,
     key: 'inputMask',
-    label: 'Input Mask',
-    tooltip: 'An input mask helps the user with input by ensuring a predefined format.<br><br>9: numeric<br>a: alphabetical<br>*: alphanumeric<br><br>Example telephone mask: (999) 999-9999<br><br>See the <a target=\'_blank\' href=\'https://github.com/RobinHerbots/jquery.inputmask\'>jquery.inputmask documentation</a> for more information.</a>',
+    label: 'قناع الادخال',
+    tooltip: 'قناع الادخال يساعد المستخدم على ادخال نص بصيغة معينة . مثلا<br><br>9: رقم<br>a: حرف<br>*: رقم او حرف<br><br>مثال قناع الجوال : 999-99-9999<br><br>انظر لـ <a target=\'_blank\' href=\'https://github.com/RobinHerbots/jquery.inputmask\'>jquery.inputmask شرح</a> للمزيد .</a>',
     customConditional(context) {
       return !context.data.allowMultipleMasks;
     }
@@ -78,8 +78,8 @@ export default [
     type: 'textfield',
     input: true,
     key: 'inputMaskPlaceholderChar',
-    label: 'Input Mask Placeholder Char',
-    tooltip: 'You can specify a char which will be used as a placeholder in the field. <br/> E.g., "\u02cd" <br/> Make note that placeholder char will be replaced by a space if it is used inside the mask',
+    label: 'النص الفارغ لقناع الحقل',
+    tooltip: 'يمكن اضافة حرف او رمز لاظهارة في الخانات الفارغة. <br/> E.g., "\u02cd" <br/>',
     validation: {
       maxLength: 1
     },
@@ -92,7 +92,7 @@ export default [
     type: 'checkbox',
     input: true,
     key: 'allowMultipleMasks',
-    label: 'Allow Multiple Masks'
+    label: 'اضافة عدة اقنعة للحقل'
   },
   {
     weight: 1350,
@@ -100,14 +100,14 @@ export default [
     input: true,
     key: 'spellcheck',
     defaultValue: true,
-    label: 'Allow Spellcheck'
+    label: 'السماح بالتصحيح'
   },
   {
     weight: 417,
     type: 'datagrid',
     input: true,
     key: 'inputMasks',
-    label: 'Input Masks',
+    label: 'اقنعة الحقل',
     customConditional(context) {
       return context.data.allowMultipleMasks === true;
     },
@@ -116,13 +116,13 @@ export default [
       {
         type: 'textfield',
         key: 'label',
-        label: 'Label',
+        label: 'العنوان',
         input: true
       },
       {
         type: 'textfield',
         key: 'mask',
-        label: 'Mask',
+        label: 'القناع',
         input: true
       }
     ]
@@ -132,45 +132,45 @@ export default [
     type: 'textfield',
     input: true,
     key: 'prefix',
-    label: 'Prefix'
+    label: 'البادئة'
   },
   {
     weight: 330,
     type: 'textfield',
     input: true,
     key: 'suffix',
-    label: 'Suffix'
+    label: 'اللاحقة'
   },
   {
     weight: 700,
     type: 'textfield',
     input: true,
     key: 'autocomplete',
-    label: 'Autocomplete',
+    label: 'الاستكمال التلقائي',
     placeholder: 'on',
-    tooltip: 'Indicates whether input elements can by default have their values automatically completed by the browser. See the <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete\'>MDN documentation</a> on autocomplete for more information.'
+    tooltip: 'هذا الخيار يحدد اذا كان الحقل يدعم الاستكمال التلقائي من النصوص المدخلة سابقا. انظر <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete\'>MDN documentation</a> للمزيد من المعلومات.'
   },
   {
     weight: 1300,
     type: 'checkbox',
-    label: 'Hide Input',
-    tooltip: 'Hide the input in the browser. This does not encrypt on the server. Do not use for passwords.',
+    label: 'اخفاء المدخلات',
+    tooltip: 'هذا الخيار لاخفاء القيمة المدخلة للحقل',
     key: 'mask',
     input: true
   },
   {
     weight: 1200,
     type: 'checkbox',
-    label: 'Show Word Counter',
-    tooltip: 'Show a live count of the number of words.',
+    label: 'اظهار عداد الكلمات',
+    tooltip: 'اظهار عداد الكلمات لمراجعة عدد الكلمات المدخلة من قبل المستخدم',
     key: 'showWordCount',
     input: true
   },
   {
     weight: 1201,
     type: 'checkbox',
-    label: 'Show Character Counter',
-    tooltip: 'Show a live count of the number of characters.',
+    label: 'اظهار عداد الاحرف',
+    tooltip: 'اظهار عداد الاحرف لمراجعة عدد الاحرف المكتوبة من قبل المستخدم',
     key: 'showCharCount',
     input: true
   },

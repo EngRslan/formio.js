@@ -4,40 +4,40 @@ export default [
   {
     weight: 0,
     type: 'checkbox',
-    label: 'Multiple Values',
-    tooltip: 'Allows multiple values to be entered for this field.',
+    label: 'متعدد القيم',
+    tooltip: 'السماح بأكثر من قيمة لهذا الحقل',
     key: 'multiple',
     input: true
   },
   {
     type: 'textfield',
-    label: 'Default Value',
+    label: 'القيمة الافتراضية',
     key: 'defaultValue',
     weight: 5,
-    placeholder: 'Default Value',
-    tooltip: 'The will be the value for this field, before user interaction. Having a default value will override the placeholder text.',
+    placeholder: 'ادخل القيمة الافتراضية',
+    tooltip: 'سوف تكون هذه القيمة هي القيمة الافتراضية للحقل وسوف يتم ارسالها للخادم فيى حالة عدم تغيرها',
     input: true
   },
   {
     weight: 30,
     type: 'radio',
-    label: 'Persistent',
-    tooltip: 'A persistent field will be stored in database when the form is submitted.',
+    label: 'حقل اساسي ل',
+    tooltip: 'سوف يتم ارسال الحقل الاساسي الي الخادم',
     key: 'persistent',
     input: true,
     inline: true,
     defaultValue: true,
     values: [
-      { label: 'None', value: false },
-      { label: 'Server', value: true },
-      { label: 'Client', value: 'client-only' },
+      { label: 'لايوجد', value: false },
+      { label: 'الخادم', value: true },
+      { label: 'المتصفح', value: 'client-only' },
     ]
   },
   {
     weight: 150,
     type: 'checkbox',
-    label: 'Protected',
-    tooltip: 'A protected field will not be returned when queried via API.',
+    label: 'محمي',
+    tooltip: 'الحقول المحمية لا تعود بقيمة من الخادم او لايتم اظهارها مرة اخرى',
     key: 'protected',
     input: true
   },
@@ -46,14 +46,14 @@ export default [
     input: true,
     weight: 200,
     key: 'dbIndex',
-    label: 'Database Index',
-    tooltip: 'Set this field as an index within the database. Increases performance for submission queries.'
+    label: 'حقل الفهرس',
+    tooltip: 'يتم فهرسة هذا الحقل للبحث به لاحقاً'
   },
   {
     weight: 400,
     type: 'checkbox',
-    label: 'Encrypted (Enterprise Only)',
-    tooltip: 'Encrypt this field on the server. This is two way encryption which is not suitable for passwords.',
+    label: 'مشفر',
+    tooltip: 'يتم تشفير هذا الحقل داخل قاعدة البيانات ويمكن فك تشفيره مرة اخرى',
     key: 'encrypted',
     input: true
   },
@@ -61,15 +61,15 @@ export default [
     type: 'select',
     input: true,
     key: 'redrawOn',
-    label: 'Redraw On',
+    label: 'اعادة رسم الحقل',
     weight: 600,
-    tooltip: 'Redraw this component if another component changes. This is useful if interpolating parts of the component like the label.',
+    tooltip: 'اعادة رسم هذا الحقل عند تغير حقل اخر داخل النموذج',
     dataSrc: 'custom',
     valueProperty: 'value',
     data: {
       custom(context) {
         var values = [];
-        values.push({ label: 'Any Change', value: 'data' });
+        values.push({ label: 'اي تغير', value: 'data' });
         context.utils.eachComponent(context.instance.options.editForm.components, function(component, path) {
           if (component.key !== context.data.key) {
             values.push({
@@ -88,36 +88,35 @@ export default [
   {
     weight: 700,
     type: 'checkbox',
-    label: 'Clear Value When Hidden',
+    label: 'حذف القيمة اذا تم اخفاءه',
     key: 'clearOnHide',
     defaultValue: true,
-    tooltip: 'When a field is hidden, clear the value.',
+    tooltip: 'عند اخفاء الحقل يتم حذف القيمة',
     input: true
   },
-  EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 1000,
-    '<p><h4>Example:</h4><pre>value = data.firstName + " " + data.lastName;</pre></p>',
-    '<p><h4>Example:</h4><pre>{"cat": [{"var": "data.firstName"}, " ", {"var": "data.lastName"}]}</pre>'
+  EditFormUtils.javaScriptValue('قيمة افتراضية مخصصة', 'customDefaultValue', 'customDefaultValue', 1000,
+    '<p><h4>مثال:</h4><pre>value = data.firstName + " " + data.lastName;</pre></p>',
+    '<p><h4>مثال:</h4><pre>{"cat": [{"var": "data.firstName"}, " ", {"var": "data.lastName"}]}</pre>'
   ),
-  EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 1100,
-    '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',
-    '<p><h4>Example:</h4><pre>{"+": [{"var": "data.a"}, {"var": "data.b"}, {"var": "data.c"}]}</pre><p><a target="_blank" href="http://formio.github.io/formio.js/app/examples/calculated.html">Click here for an example</a></p>',
-'<tr><th>token</th><td>The decoded JWT token for the authenticated user.</td></tr>'
+  EditFormUtils.javaScriptValue('قيمة حسابية', 'calculateValue', 'calculateValue', 1100,
+    '<p><h4>مثال:</h4><pre>value = data.a + data.b + data.c;</pre></p>',
+    '<p><h4>مثال:</h4><pre>{"+": [{"var": "data.a"}, {"var": "data.b"}, {"var": "data.c"}]}</pre><p></p>'
   ),
   {
     type: 'checkbox',
     input: true,
     weight: 1100,
     key: 'calculateServer',
-    label: 'Calculate Value on server',
-    tooltip: 'Checking this will run the calculation on the server. This is useful if you wish to override the values submitted with the calculations performed on the server.'
+    label: 'حساب القيمة في الخادم',
+    tooltip: 'سوف يتم تغير القيمة في الخادم بعد الارسال'
   },
   {
     type: 'checkbox',
     input: true,
     weight: 1200,
     key: 'allowCalculateOverride',
-    label: 'Allow Manual Override of Calculated Value',
-    tooltip: 'When checked, this will allow the user to manually override the calculated value.'
+    label: 'السماح بتغير القيمة بشكل يدوي',
+    tooltip: 'سوف يتم السماح للمستخدم بتغير القيمة بشكل يدوي بعد التنفيذ'
   },
 ];
 /* eslint-enable max-len */

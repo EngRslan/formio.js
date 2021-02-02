@@ -5,7 +5,7 @@ export default class PasswordComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'password',
-      label: 'Password',
+      label: 'كلمة مرور',
       key: 'password',
       protected: true,
       tableView: false,
@@ -14,7 +14,7 @@ export default class PasswordComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Password',
+      title: 'كلمة مرور',
       icon: 'asterisk',
       group: 'basic',
       documentation: '/userguide/#password',

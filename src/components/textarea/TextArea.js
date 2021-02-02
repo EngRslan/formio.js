@@ -8,7 +8,7 @@ export default class TextAreaComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'textarea',
-      label: 'Text Area',
+      label: 'نص موسع',
       key: 'textArea',
       rows: 3,
       wysiwyg: false,
@@ -24,7 +24,7 @@ export default class TextAreaComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Text Area',
+      title: 'نص موسع',
       group: 'basic',
       icon: 'font',
       documentation: '/userguide/#textarea',
