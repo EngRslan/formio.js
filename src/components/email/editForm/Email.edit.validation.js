@@ -9,16 +9,16 @@ export default [
   },
   {
     type: 'panel',
-    label: 'Kickbox',
+    label: 'Kickbox خدمة',
     title: 'Kickbox',
     weight: 102,
     key: 'kickbox',
     components: [
       {
         type: 'checkbox',
-        label: 'Enable',
-        tooltip: 'Enable Kickbox validation for this email field.',
-        description: 'Validate this email using the Kickbox email validation service.',
+        label: 'تفعيل',
+        tooltip: 'تفعيل خدمة Kickbox لفحص البريد الاكتروني',
+        description: 'فحص البريد الالكتروني عن طريق خدمة فحصي البريد الالكتروني المقدمة من Kickbox',
         key: 'kickbox.enabled'
       }
     ]

@@ -4,7 +4,7 @@ export default class EmailComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'email',
-      label: 'Email',
+      label: 'بريد الكتروني',
       key: 'email',
       inputType: 'email',
       kickbox: {
@@ -15,7 +15,7 @@ export default class EmailComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Email',
+      title: 'بريد الكتروني',
       group: 'advanced',
       icon: 'at',
       documentation: '/userguide/#email',

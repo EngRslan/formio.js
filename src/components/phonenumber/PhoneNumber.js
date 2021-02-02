@@ -4,16 +4,16 @@ export default class PhoneNumberComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'phoneNumber',
-      label: 'Phone Number',
+      label: 'رقم جوال',
       key: 'phoneNumber',
       inputType: 'tel',
-      inputMask: '(999) 999-9999'
+      inputMask: '0999999999'
     }, ...extend);
   }
 
   static get builderInfo() {
     return {
-      title: 'Phone Number',
+      title: 'رقم جوال',
       group: 'advanced',
       icon: 'phone-square',
       weight: 30,

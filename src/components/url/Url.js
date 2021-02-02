@@ -4,7 +4,7 @@ export default class UrlComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'url',
-      label: 'Url',
+      label: 'رابط',
       key: 'url',
       inputType: 'url'
     }, ...extend);
@@ -12,7 +12,7 @@ export default class UrlComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Url',
+      title: 'رابط',
       group: 'advanced',
       icon: 'link',
       documentation: '/userguide/#url',

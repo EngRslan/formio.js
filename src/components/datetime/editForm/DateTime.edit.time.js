@@ -3,32 +3,32 @@ export default [
     type: 'checkbox',
     input: true,
     key: 'enableTime',
-    label: 'Enable Time Input',
-    tooltip: 'Enables time input for this field.',
+    label: 'تفعيل ادخال الوقت',
+    tooltip: 'تفعيل الوقت من ضمن مدخلاص الحقل.',
     weight: 0
   },
   {
     type: 'number',
     input: true,
     key: 'timePicker.hourStep',
-    label: 'Hour Step Size',
-    tooltip: 'The number of hours to increment/decrement in the time picker.',
+    label: 'مقدار حركة الساعات',
+    tooltip: 'مفدار حركة الساعات للاعلى/الاسفل',
     weight: 10
   },
   {
     type: 'number',
     input: true,
     key: 'timePicker.minuteStep',
-    label: 'Minute Step Size',
-    tooltip: 'The number of minutes to increment/decrement in the time picker.',
+    label: 'مقدار حركة الدقائق',
+    tooltip: 'مقدار حركة الدقائق للأعلى/الاسفل',
     weight: 20
   },
   {
     type: 'checkbox',
     input: true,
     key: 'timePicker.showMeridian',
-    label: '12 Hour Time (AM/PM)',
-    tooltip: 'Display time in 12 hour time with AM/PM.',
+    label: 'توقيت 12/24 ساعة',
+    tooltip: 'عرض توقيت 12 ساعه مع اضافة am/pm',
     weight: 30
   }
 ];

@@ -8,29 +8,29 @@ export default [
     type: 'textfield',
     input: true,
     key: 'delimeter',
-    label: 'Delimiter',
-    tooltip: 'What is used to separate the tags.</a>'
+    label: 'الفاصل',
+    tooltip: 'تحديد الفاصل الذي سيفصل الاوسمة</a>'
   },
   {
     weight: 22,
     type: 'number',
     input: true,
     key: 'maxTags',
-    label: 'Max Tags',
+    label: 'الحد الاقصى للاوسمة',
     defaultValue: 0,
-    tooltip: 'The maximum amount of tags that can be added. 0 for infinity.'
+    tooltip: 'الحد الاقصي للاوسمة المسموح به يمكن وضع 0 لتعطيل الحد الاعلى والسماح بكل الاوسمة'
   },
   {
     weight: 24,
     type: 'select',
     input: true,
     key: 'storeas',
-    label: 'Store As',
+    label: 'حفظ كـ',
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'String (CSV)', value: 'string' },
-        { label: 'Array of Tags', value: 'array' }
+        { label: 'نص (CSV)', value: 'string' },
+        { label: 'مصفوفة من الاوسمة', value: 'array' }
       ]
     }
   }

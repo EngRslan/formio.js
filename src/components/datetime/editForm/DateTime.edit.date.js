@@ -6,9 +6,9 @@ export default [
     type: 'checkbox',
     input: true,
     key: 'enableDate',
-    label: 'Enable Date Input',
+    label: 'تفعيل ادخال التاريخ',
     weight: 0,
-    tooltip: 'Enables date input for this field.'
+    tooltip: 'السماح بادخال التاريخ لهذا الحقل'
   },
   {
     type: 'checkbox',

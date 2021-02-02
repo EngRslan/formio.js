@@ -3,9 +3,9 @@ export default [
     type: 'textfield',
     input: true,
     key: 'defaultDate',
-    label: 'Default Date',
+    label: 'التاريخ الافتراضي',
     placeholder: 'moment()',
-    tooltip: 'You can use Moment.js functions to set the default value to a specific date. For example: \n \n moment().subtract(10, \'days\')',
+    tooltip: 'يمكن استخدام دوال Moment.js لتحديد القيمة الافتراضية للحقل مثال: \n \n moment().subtract(10, \'days\')',
     weight: 6
   },{
     type: 'textarea',
@@ -14,8 +14,8 @@ export default [
     weight: 28,
     input: true,
     key: 'customOptions',
-    label: 'Flatpickr options',
-    tooltip: 'A raw JSON object to use as options for the Date / Time component (Flatpickr).',
+    label: 'Flatpickr خيارات',
+    tooltip: 'الاعدادت الخاصة بـ (Flatpickr) باستخدام JSON ليتم تمريرها كإعدادات للاضافة.',
     defaultValue: {},
   },
 ];

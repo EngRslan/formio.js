@@ -9,7 +9,7 @@ export default class TagsComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'tags',
-      label: 'Tags',
+      label: 'اوسمة',
       key: 'tags',
       delimeter: ',',
       storeas: 'string',
@@ -19,7 +19,7 @@ export default class TagsComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Tags',
+      title: 'اوسمة',
       icon: 'tags',
       group: 'advanced',
       documentation: '/userguide/#tags',
