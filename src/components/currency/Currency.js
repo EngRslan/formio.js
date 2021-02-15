@@ -8,16 +8,16 @@ export default class CurrencyComponent extends NumberComponent {
   static schema(...extend) {
     return NumberComponent.schema({
       type: 'currency',
-      label: 'Currency',
+      label: 'عملة',
       key: 'currency'
     }, ...extend);
   }
 
   static get builderInfo() {
     return {
-      title: 'Currency',
+      title: 'عملة',
       group: 'advanced',
-      icon: 'usd',
+      icon: 'coins',
       documentation: '/userguide/#currency',
       weight: 70,
       schema: CurrencyComponent.schema()

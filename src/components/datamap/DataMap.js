@@ -7,17 +7,17 @@ import { uniqueKey } from '../../utils/utils';
 export default class DataMapComponent extends DataGridComponent {
   static schema(...extend) {
     return Component.schema({
-      label: 'Data Map',
+      label: 'خريطة بيانات',
       key: 'dataMap',
       type: 'datamap',
       clearOnHide: true,
-      addAnother: 'Add Another',
+      addAnother: 'اضافة اخر',
       disableAddingRemovingRows: false,
       keyBeforeValue: true,
       valueComponent: {
         type: 'textfield',
         key: 'value',
-        label: 'Value',
+        label: 'القيمة',
         input: true
       },
       input: true,
@@ -30,7 +30,7 @@ export default class DataMapComponent extends DataGridComponent {
 
   static get builderInfo() {
     return {
-      title: 'Data Map',
+      title: 'خريطة بيانات',
       icon: 'th-list',
       group: 'data',
       documentation: '/userguide/#datamap',

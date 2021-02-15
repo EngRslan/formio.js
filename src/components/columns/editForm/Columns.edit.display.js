@@ -36,9 +36,9 @@ export default [
     type: 'datagrid',
     input: true,
     key: 'columns',
-    label: 'Column Properties',
-    addAnother: 'Add Column',
-    tooltip: 'The width, offset, push, and pull settings for each column.',
+    label: 'خصائص الاعمدة',
+    addAnother: 'اضافة عمود',
+    tooltip: 'مقدار العرض ، الازاحة ، دفع وخصائص العمود',
     reorder: true,
     components: [
       {
@@ -50,7 +50,7 @@ export default [
         type: 'select',
         key: 'size',
         defaultValue: 'md',
-        label: 'Size',
+        label: 'الحجم',
         data: {
           values: [
             { label: 'xs', value: 'xs' },
@@ -90,17 +90,17 @@ export default [
   {
     weight: 160,
     type: 'checkbox',
-    label: 'Auto adjust columns',
-    tooltip: 'Will automatically adjust columns based on if nested components are hidden.',
+    label: 'تنسيق الاعمدة بشكل الي',
+    tooltip: 'سوف يتم محاذاة الاعمدة بشكل الي بالعتماد على المكوانت المخفية داخل العمود',
     key: 'autoAdjust',
     input: true
   },
   {
     weight: 161,
     type: 'checkbox',
-    label: 'Hide Column when Children Hidden',
+    label: 'اخفاء العمود عن اخفاء محتواه',
     key: 'hideOnChildrenHidden',
-    tooltip: 'Check this if you would like to hide any column when the children within that column are also hidden',
+    tooltip: 'فحص محتوى العمود اذا كن محتواه فارغ يتم ايضا اخفاء العمود',
     input: true
   }
 ];

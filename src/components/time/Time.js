@@ -8,7 +8,7 @@ export default class TimeComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'time',
-      label: 'Time',
+      label: 'الوقت',
       key: 'time',
       inputType: 'time',
       format: 'HH:mm',
@@ -35,8 +35,8 @@ export default class TimeComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Time',
-      icon: 'clock-o',
+      title: 'وقت',
+      icon: 'clock',
       group: 'advanced',
       documentation: '/userguide/#time',
       weight: 55,

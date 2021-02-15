@@ -6,9 +6,9 @@ export default class SignatureComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'signature',
-      label: 'Signature',
+      label: 'توقيع الكتروني',
       key: 'signature',
-      footer: 'Sign above',
+      footer: 'وقع اعلاه',
       width: '100%',
       height: '150px',
       penColor: 'black',
@@ -20,9 +20,9 @@ export default class SignatureComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Signature',
+      title: 'توقيع الكتروني',
       group: 'advanced',
-      icon: 'pencil',
+      icon: 'signature',
       weight: 120,
       documentation: '/userguide/#signature',
       schema: SignatureComponent.schema()

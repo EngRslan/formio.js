@@ -23,19 +23,19 @@ export default function(...extend) {
     },
     {
       key: 'day',
-      label: 'Day',
+      label: 'تاريخ',
       weight: 3,
       components: DayEditDay
     },
     {
       key: 'month',
-      label: 'Month',
+      label: 'شهر',
       weight: 3,
       components: DayEditMonth
     },
     {
       key: 'year',
-      label: 'Year',
+      label: 'سنة',
       weight: 3,
       components: DayEditYear
     },

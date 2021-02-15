@@ -4,7 +4,7 @@ import NestedComponent from '../_classes/nested/NestedComponent';
 export default class ColumnsComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Columns',
+      label: 'أعمدة',
       key: 'columns',
       type: 'columns',
       columns: [
@@ -22,7 +22,7 @@ export default class ColumnsComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Columns',
+      title: 'أعمدة',
       icon: 'columns',
       group: 'layout',
       documentation: '/userguide/#columns',

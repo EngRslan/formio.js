@@ -33,77 +33,77 @@ export default [
   },
   {
     type: 'number',
-    label: 'Number of Rows',
+    label: 'عدد الصفوف',
     key: 'numRows',
     input: true,
     weight: 1,
-    placeholder: 'Number of Rows',
-    tooltip: 'Enter the number or rows that should be displayed by this table.'
+    placeholder: 'ادخل عدد صفوف الجدول',
+    tooltip: 'ادخل عد الصفوف الذي سيظهر بها الجدول'
   },
   {
     type: 'number',
-    label: 'Number of Columns',
+    label: 'عدد الاعمدة',
     key: 'numCols',
     input: true,
     weight: 2,
-    placeholder: 'Number of Columns',
-    tooltip: 'Enter the number or columns that should be displayed by this table.'
+    placeholder: 'ادخل عدد الاعمدة',
+    tooltip: 'ادخل عدد الاعمدة الذي سيظهر بها الجدول'
   },
   {
     type: 'checkbox',
-    label: 'Clone Row Components',
+    label: 'نسخ محتويات الصف الاول',
     key: 'cloneRows',
     input: true,
     weight: 3,
-    tooltip: 'Check this if you would like to "clone" the first row of components to all additional empty rows of the table.'
+    tooltip: 'اختار فى حالة كنت تود نسخ محتويات الصف الاول الى جميع الصفوف الفارغة'
   },
   {
     type: 'select',
-    label: 'Cell Alignment',
+    label: 'محاذاة الخلية',
     key: 'cellAlignment',
     input: true,
-    tooltip: 'Horizontal alignment for cells of the table.',
+    tooltip: 'المحاذاة الافقية للخلية',
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'Left', value: 'left' },
-        { label: 'Center', value: 'center' },
-        { label: 'Right', value: 'right' }
+        { label: 'يسار', value: 'left' },
+        { label: 'وسط', value: 'center' },
+        { label: 'يمين', value: 'right' }
       ]
     },
-    defaultValue: 'left',
+    defaultValue: 'right',
     weight: 3
   },
   {
     type: 'checkbox',
-    label: 'Striped',
+    label: 'مخطط',
     key: 'striped',
-    tooltip: 'This will stripe the table if checked.',
+    tooltip: 'فى حالة تحديد هذا الخيار سيتم تخطيط صفوف الجدول حسب الفردي و الزوجي',
     input: true,
     weight: 701
   },
   {
     type: 'checkbox',
-    label: 'Bordered',
+    label: 'اظهار حدود الخلايا',
     key: 'bordered',
     input: true,
-    tooltip: 'This will border the table if checked.',
+    tooltip: 'عند تحديد هذا الخيار سوف يتم رسم حدود الخلايا',
     weight: 702
   },
   {
     type: 'checkbox',
-    label: 'Hover',
+    label: 'تأثير الرفرفة',
     key: 'hover',
     input: true,
-    tooltip: 'Highlight a row on hover.',
+    tooltip: 'اظهار تأثير عند المرور بالمؤشر على الصف',
     weight: 703
   },
   {
     type: 'checkbox',
-    label: 'Condensed',
+    label: 'مكثف',
     key: 'condensed',
     input: true,
-    tooltip: 'Condense the size of the table.',
+    tooltip: 'تكثيف حكم الجدول',
     weight: 704
   },
 ];

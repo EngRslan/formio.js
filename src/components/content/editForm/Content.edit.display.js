@@ -38,8 +38,8 @@ export default [
   {
     weight: 700,
     type: 'checkbox',
-    label: 'Refresh On Change',
-    tooltip: 'Rerender the field whenever a value on the form changes.',
+    label: 'تحديث عن التغير',
+    tooltip: 'اعادة رسم الحقل عند تحديث النموذج',
     key: 'refreshOnChange',
     input: true
   },

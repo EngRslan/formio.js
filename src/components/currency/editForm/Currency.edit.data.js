@@ -4,9 +4,9 @@ export default [
     input: true,
     weight: 50,
     key: 'currency',
-    label: 'Currency',
-    tooltip: 'The currency to use in currency formatting. Possible values are (ISO-4217) currency codes.',
-    defaultValue: 'USD',
+    label: 'عملة',
+    tooltip: 'العملة المستخدمة للعرض سوف يتم الاعتماد على الاكود العالمية. (ISO-4217)',
+    defaultValue: 'SAR',
     dataSrc: 'values',
     data: {
       values: [

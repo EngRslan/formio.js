@@ -34,25 +34,25 @@ export default [
     weight: 1,
     type: 'textfield',
     input: true,
-    placeholder: 'Panel Title',
-    label: 'Title',
+    placeholder: 'عنوان اللوحة',
+    label: 'العنوان',
     key: 'title',
-    tooltip: 'The title text that appears in the header of this panel.'
+    tooltip: 'العنوان الذي سيظهر اعلى اللوحة'
   },
   {
     weight: 20,
     type: 'textarea',
     input: true,
     key: 'tooltip',
-    label: 'Tooltip',
-    placeholder: 'To add a tooltip to this field, enter text here.',
-    tooltip: 'Adds a tooltip to the side of this field.'
+    label: 'التلميح',
+    placeholder: 'ادخل التلميح',
+    tooltip: 'اضافة تلميح بجوار الحقل'
   },
   {
     weight: 30,
     type: 'select',
     input: true,
-    label: 'Theme',
+    label: 'السمة',
     key: 'theme',
     dataSrc: 'values',
     data: {
@@ -74,7 +74,7 @@ export default [
       {
         type: 'select',
         input: true,
-        label: 'Breadcrumb Type',
+        label: 'نوع مسار التنقل',
         key: 'breadcrumb',
         dataSrc: 'values',
         data: {
@@ -88,7 +88,7 @@ export default [
       {
         input: true,
         type: 'checkbox',
-        label: 'Allow click on Breadcrumb',
+        label: 'تفعيل الضغط على مسار التنقل',
         key: 'breadcrumbClickable',
         defaultValue: true,
         conditional: {
@@ -98,29 +98,29 @@ export default [
       {
         input: true,
         type: 'checkbox',
-        label: 'Allow Previous',
+        label: 'السماح للرجوع للخلف',
         key: 'allowPrevious',
         defaultValue: false,
-        tooltip: 'Determines if the breadcrumb bar is clickable or not for visited tabs.',
+        tooltip: 'تحديد هل يمكن السماح للعودة للخلف',
         conditional: {
           json: { '===': [{ var: 'data.breadcrumbClickable' }, false] }
         }
       },
       {
         weight: 50,
-        label: 'Panel Navigation Buttons',
+        label: 'عنواين ازرار التحرك',
         optionsLabelPosition: 'right',
         values: [
           {
-            label: 'Previous',
+            label: 'السابق',
             value: 'previous',
           },
           {
-            label: 'Cancel',
+            label: 'الغاء',
             value: 'cancel',
           },
           {
-            label: 'Next',
+            label: 'التالي',
             value: 'next',
           }
         ],
@@ -137,13 +137,13 @@ export default [
       },
       {
         weight: 60,
-        label: 'Scroll up on page opening',
+        label: 'السحب لاعلى',
         type: 'checkbox',
         key: 'scrollToTop',
         input: true,
         inputType: 'checkbox',
         defaultValue: false,
-        tooltip: 'Scroll to the top of the wizard page when user navigates to it'
+        tooltip: 'سحب الصفحة لاعلى'
       }
     ],
     customConditional(context) {
@@ -153,16 +153,16 @@ export default [
   {
     weight: 650,
     type: 'checkbox',
-    label: 'Collapsible',
-    tooltip: 'If checked, this will turn this Panel into a collapsible panel.',
+    label: 'قابلة للطي',
+    tooltip: 'فى حالة التحديد سوف يتم السماح بطى او فتح اللوحة',
     key: 'collapsible',
     input: true
   },
   {
     weight: 651,
     type: 'checkbox',
-    label: 'Initially Collapsed',
-    tooltip: 'Determines the initial collapsed state of this Panel.',
+    label: 'مغلقة بشكل افتراضي',
+    tooltip: 'تحديد ما اذا كانت هذه اللوحة ستكون مغلقة بشكل افتراضي',
     key: 'collapsed',
     input: true,
     conditional: {

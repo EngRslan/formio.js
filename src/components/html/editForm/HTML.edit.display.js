@@ -40,35 +40,35 @@ export default [
     input: true,
     key: 'tag',
     weight: 50,
-    label: 'HTML Tag',
-    placeholder: 'HTML Element Tag',
-    tooltip: 'The tag of this HTML element.'
+    label: 'HTML وسم',
+    placeholder: 'HTML وسم عنصر',
+    tooltip: 'وسم عنصر الHTML الذي سيتم انشاؤه'
   },
   {
     type: 'textfield',
     input: true,
     key: 'className',
     weight: 60,
-    label: 'CSS Class',
-    placeholder: 'CSS Class',
-    tooltip: 'The CSS class for this HTML element.'
+    label: 'CSS فئات',
+    placeholder: 'CSS فئات',
+    tooltip: 'فئات CSS الذي سوف يتم ارساله لعنصر ال HTML'
   },
   {
     type: 'datagrid',
     input: true,
-    label: 'Attributes',
+    label: 'الخصائص',
     key: 'attrs',
-    tooltip: 'The attributes for this HTML element. Only safe attributes are allowed, such as src, href, and title.',
+    tooltip: 'الخصائص الذس سيتم وضعها لعنصر الHTML مثل href="#"',
     weight: 70,
     components: [
       {
-        label: 'Attribute',
+        label: 'الخاصية',
         key: 'attr',
         input: true,
         type: 'textfield'
       },
       {
-        label: 'Value',
+        label: 'القيمة',
         key: 'value',
         input: true,
         type: 'textfield'
@@ -81,17 +81,17 @@ export default [
     editor: 'ace',
     rows: 10,
     as: 'html',
-    label: 'Content',
-    tooltip: 'The content of this HTML element.',
-    defaultValue: '<div class="well">Content</div>',
+    label: 'المحتوى',
+    tooltip: 'محتوى عنصر ال HTML',
+    defaultValue: '<div class="well">المحتوى</div>',
     key: 'content',
     weight: 80
   },
   {
     weight: 85,
     type: 'checkbox',
-    label: 'Refresh On Change',
-    tooltip: 'Rerender the field whenever a value on the form changes.',
+    label: 'التحديث عند التغير',
+    tooltip: 'اعادة رسم الحقل عند تغير اي قيمة فى النموذج',
     key: 'refreshOnChange',
     input: true
   },

@@ -4,7 +4,7 @@ import _ from 'lodash';
 export default class ContentComponent extends Component {
   static schema(...extend) {
     return Component.schema({
-      label: 'Content',
+      label: 'محتوى',
       type: 'content',
       key: 'content',
       input: false,
@@ -14,9 +14,9 @@ export default class ContentComponent extends Component {
 
   static get builderInfo() {
     return {
-      title: 'Content',
+      title: 'محتوى',
       group: 'layout',
-      icon: 'html5',
+      icon: 'file-code',
       preview: false,
       documentation: '/userguide/#content-component',
       weight: 5,

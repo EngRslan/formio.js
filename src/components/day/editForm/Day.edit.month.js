@@ -4,15 +4,15 @@ export default [
     type: 'select',
     datasrc: 'values',
     key: 'fields.month.type',
-    label: 'Type of input',
+    label: 'نوع المدخل',
     data: {
       values: [
         {
-          label: 'Number',
+          label: 'رقم',
           value: 'number'
         },
         {
-          label: 'Select',
+          label: 'اختيار',
           value: 'select'
         },
       ]
@@ -23,15 +23,15 @@ export default [
     type: 'textfield',
     input: true,
     key: 'fields.month.placeholder',
-    label: 'Placeholder',
-    placeholder: 'Month Placeholder',
-    tooltip: 'The placeholder text that will appear when Month field is empty.'
+    label: 'النص الفارغ',
+    placeholder: 'ادخل النص الفارغ للشهر',
+    tooltip: 'هذا النص سوف يظهر فى حقل الشهر عندما يكون فارغ'
   },
   {
     weight: 215,
     type: 'checkbox',
-    label: 'Hidden',
-    tooltip: 'Hide the Month part of the component.',
+    label: 'مخفى',
+    tooltip: 'اخفاء حقل الشهر من التاريخ',
     key: 'fields.month.hide',
     input: true
   },

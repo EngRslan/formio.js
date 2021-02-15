@@ -5,11 +5,11 @@ import FormComponent from '../form/Form';
 export default class PanelComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Panel',
+      label: 'لوحة',
       type: 'panel',
       key: 'panel',
-      title: 'Panel',
-      theme: 'default',
+      title: 'لوحة',
+      theme: 'primary',
       breadcrumb: 'default',
       components: [],
       clearOnHide: false,
@@ -21,7 +21,7 @@ export default class PanelComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Panel',
+      title: 'لوحة',
       icon: 'list-alt',
       group: 'layout',
       documentation: '/userguide/#panels',

@@ -4,15 +4,15 @@ export default [
     type: 'select',
     datasrc: 'values',
     key: 'fields.day.type',
-    label: 'Type',
+    label: 'النوع',
     data: {
       values: [
         {
-          label: 'Number',
+          label: 'رقم',
           value: 'number'
         },
         {
-          label: 'Select',
+          label: 'اختيار',
           value: 'select'
         },
       ]
@@ -23,23 +23,23 @@ export default [
     type: 'textfield',
     input: true,
     key: 'fields.day.placeholder',
-    label: 'Placeholder',
-    placeholder: 'Day Placeholder',
-    tooltip: 'The placeholder text that will appear when Day field is empty.'
+    label: 'النص الفارخ',
+    placeholder: 'ادخل النص الفاريغ',
+    tooltip: 'النص الفارغ هوا النص الظاهر عندما يكون الحقل فارغ'
   },
   {
     weight: 215,
     type: 'checkbox',
-    label: 'Hidden',
-    tooltip: 'Hide the Day part of the component.',
+    label: 'مخفى',
+    tooltip: 'اخفاء اليوم من التاريخ',
     key: 'fields.day.hide',
     input: true
   },
   {
     weight: 214,
     type: 'checkbox',
-    label: 'Day First',
-    tooltip: 'Display the Day field before the Month field.',
+    label: 'اليوم اولا',
+    tooltip: 'اظهار اليوم اولا قبل الشهر.',
     key: 'dayFirst',
     input: true
   },

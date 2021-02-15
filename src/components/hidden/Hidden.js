@@ -11,7 +11,7 @@ export default class HiddenComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Hidden',
+      title: 'حقل مخفي',
       group: 'data',
       icon: 'user-secret',
       weight: 0,

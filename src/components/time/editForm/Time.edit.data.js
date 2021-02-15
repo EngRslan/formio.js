@@ -3,9 +3,9 @@ export default [
     type: 'textfield',
     input: true,
     key: 'dataFormat',
-    label: 'Data Format',
+    label: 'صيغة الوقت',
     placeholder: 'HH:mm:ss',
-    tooltip: 'The moment.js format for saving the value of this field.',
+    tooltip: 'صيغة مكتبة moment الذي سوف يتم حفظها فى هذا الحقل',
     weight: 25,
   },
 ];

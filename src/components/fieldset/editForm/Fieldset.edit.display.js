@@ -35,8 +35,8 @@ export default [
     type: 'textfield',
     input: true,
     key: 'legend',
-    label: 'Legend',
-    placeholder: 'Legend',
-    tooltip: 'The legend for this Fieldset.'
+    label: 'العنوان',
+    placeholder: 'ادخل العنوان',
+    tooltip: 'عنوان مجموعة الحقول'
   },
 ];

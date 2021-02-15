@@ -27,13 +27,13 @@ export default function(...extend) {
     weight: 0,
     type: 'textarea',
     editor: 'ckeditor',
-    label: 'Content',
+    label: 'المحتوى',
     hideLabel: true,
     input: true,
     key: 'html',
     as: 'html',
     rows: 3,
-    tooltip: 'The HTML template for the result data items.',
+    tooltip: 'محتوى قالب الHTML الذي سوف يتم استخدامه',
   }].concat(editForm.components);
   return editForm;
 }

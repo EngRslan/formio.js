@@ -4,7 +4,7 @@ import NestedComponent from '../_classes/nested/NestedComponent';
 export default class TabsComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Tabs',
+      label: 'تبويبات',
       type: 'tabs',
       input: false,
       key: 'tabs',
@@ -12,7 +12,7 @@ export default class TabsComponent extends NestedComponent {
       tableView: false,
       components: [
         {
-          label: 'Tab 1',
+          label: 'تبويب 1',
           key: 'tab1',
           components: [],
         },
@@ -22,9 +22,9 @@ export default class TabsComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Tabs',
+      title: 'تبويبات',
       group: 'layout',
-      icon: 'folder-o',
+      icon: 'folder',
       weight: 50,
       documentation: '/userguide/#tabs',
       schema: TabsComponent.schema(),

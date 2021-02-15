@@ -4,15 +4,15 @@ export default [
     type: 'select',
     datasrc: 'values',
     key: 'fields.year.type',
-    label: 'Type of input',
+    label: 'نوع الادخال',
     data: {
       values: [
         {
-          label: 'Number',
+          label: 'رقم',
           value: 'number'
         },
         {
-          label: 'Select',
+          label: 'اختيار',
           value: 'select'
         },
       ]
@@ -23,33 +23,33 @@ export default [
     type: 'number',
     input: true,
     key: 'fields.year.minYear',
-    label: 'Minimum Year',
+    label: 'اقل سنة',
     placeholder: '1900',
-    tooltip: 'The minimum year that can be entered.'
+    tooltip: 'اقل سنة يمكن ان يقبلها الحقل'
   },
   {
     weight: 204,
     type: 'number',
     input: true,
     key: 'fields.year.maxYear',
-    label: 'Maximum Year',
+    label: 'اكبر سنة',
     placeholder: '2030',
-    tooltip: 'The maximum year that can be entered.'
+    tooltip: 'اكبر سنة يمكن ان يقبلها الحقل'
   },
   {
     weight: 210,
     type: 'textfield',
     input: true,
     key: 'fields.year.placeholder',
-    label: 'Placeholder',
-    placeholder: 'Year Placeholder',
-    tooltip: 'The placeholder text that will appear when Year field is empty.'
+    label: 'النص الفارغ',
+    placeholder: 'ادخل النص الفارغ للسنة',
+    tooltip: 'ادخل النص الفارغ للسنة الذي سوف يظهر فى حالة كان الحقل فارغ'
   },
   {
     weight: 215,
     type: 'checkbox',
-    label: 'Hidden',
-    tooltip: 'Hide the Year part of the component.',
+    label: 'مخفى',
+    tooltip: 'اخفاء السنة من حقل التاريخ',
     key: 'fields.year.hide',
     input: true
   },

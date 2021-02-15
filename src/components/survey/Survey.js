@@ -6,7 +6,7 @@ export default class SurveyComponent extends Field {
   static schema(...extend) {
     return Field.schema({
       type: 'survey',
-      label: 'Survey',
+      label: 'استبيان',
       key: 'survey',
       questions: [],
       values: []
@@ -15,7 +15,7 @@ export default class SurveyComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Survey',
+      title: 'استبيان',
       group: 'advanced',
       icon: 'list',
       weight: 110,

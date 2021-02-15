@@ -9,7 +9,7 @@ export default [
   },
   {
     type: 'textfield',
-    label: 'Label for Key column',
+    label: 'عنوان عمود المفتاح',
     key: 'keyLabel',
     tooltip: 'Provide a label text for Key column (otherwise \'Key\' will be used)',
     weight: 404,
@@ -17,26 +17,26 @@ export default [
   },
   {
     type: 'checkbox',
-    label: 'Disable Adding / Removing Rows',
+    label: 'الغاء تفعيل اضافة حذف الصفوف',
     key: 'disableAddingRemovingRows',
-    tooltip: 'Check if you want to hide Add Another button and Remove Row button',
+    tooltip: 'حدد هذا الخيار فى حالة كنت تريد الغاء خاصية اضافة حذف الصفوف',
     weight: 405,
     input: true
   },
   {
     type: 'checkbox',
-    label: 'Show key column before value',
+    label: 'اظهار عمود المفتاح قبل عمود القيمة',
     key: 'keyBeforeValue',
-    tooltip: 'Check if you would like to show the Key before the Value column.',
+    tooltip: 'حدد هذا الخيار فى حالة كنت تريد ان يكون عمود المفتاح قبل عنوان القيمة',
     weight: 406,
     input: true
   },
   {
     type: 'textfield',
-    label: 'Add Another Text',
+    label: 'نص زر اضافة اخر',
     key: 'addAnother',
-    tooltip: 'Set the text of the Add Another button.',
-    placeholder: 'Add Another',
+    tooltip: 'العنوان الذي سيظهر على مفتاح اضافة اخر',
+    placeholder: 'اضافة اخر',
     weight: 410,
     input: true,
     customConditional(context) {

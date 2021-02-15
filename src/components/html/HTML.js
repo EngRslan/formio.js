@@ -16,7 +16,7 @@ export default class HTMLComponent extends Component {
 
   static get builderInfo() {
     return {
-      title: 'HTML Element',
+      title: 'HTML عنصر',
       group: 'layout',
       icon: 'code',
       weight: 0,

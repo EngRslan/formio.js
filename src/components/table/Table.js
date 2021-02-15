@@ -17,7 +17,7 @@ export default class TableComponent extends NestedComponent {
 
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Table',
+      label: 'جدول',
       type: 'table',
       input: false,
       key: 'table',
@@ -37,7 +37,7 @@ export default class TableComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Table',
+      title: 'جدول',
       group: 'layout',
       icon: 'table',
       weight: 40,

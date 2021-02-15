@@ -6,8 +6,8 @@ export default [
   {
     weight: 15,
     type: 'checkbox',
-    label: 'Hide Input Labels',
-    tooltip: 'Hide the labels of component inputs. This allows you to show the labels in the form builder, but not when it is rendered.',
+    label: 'اخفاء عنواين حقول الادخال',
+    tooltip: 'اخفاء حقول الادخال . لا تختفى الحقول وقت التصميم لكن تختفى عن توليد النموذج للعميل',
     key: 'hideInputLabels',
     input: true
   },
@@ -15,17 +15,17 @@ export default [
     type: 'select',
     input: true,
     key: 'inputsLabelPosition',
-    label: 'Inputs Label Position',
-    tooltip: 'Position for the labels for inputs for this field.',
+    label: 'موقع حقول الادخال',
+    tooltip: 'الموقع التي سوف تظهر فيه حقول الادخال حول الحقول.',
     weight: 40,
     defaultValue: 'top',
     dataSrc: 'values',
     data: {
       values: [
-        { label: 'Top', value: 'top' },
-        { label: 'Left', value: 'left' },
-        { label: 'Right', value: 'right' },
-        { label: 'Bottom', value: 'bottom' }
+        { label: 'الاعلى', value: 'top' },
+        { label: 'اليسار', value: 'left' },
+        { label: 'اليمين', value: 'right' },
+        { label: 'الاسفل', value: 'bottom' }
       ]
     }
   },
@@ -36,8 +36,8 @@ export default [
   {
     weight: 213,
     type: 'checkbox',
-    label: 'Use Locale Settings',
-    tooltip: 'Use locale settings to display day.',
+    label: 'استخدام الاعدادات المحلية',
+    tooltip: 'استخدام الاعدادات فى متصفح العميل.',
     key: 'useLocaleSettings',
     input: true
   },

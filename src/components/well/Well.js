@@ -13,8 +13,8 @@ export default class WellComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Well',
-      icon: 'square-o',
+      title: 'حاوية',
+      icon: 'square',
       group: 'layout',
       documentation: '/userguide/#well',
       weight: 60,

@@ -35,7 +35,7 @@ export default [
     key: 'components',
     type: 'datagrid',
     input: true,
-    label: 'Tabs',
+    label: 'تبويبات',
     weight: 50,
     reorder: true,
     components: [
@@ -43,13 +43,13 @@ export default [
         type: 'textfield',
         input: true,
         key: 'label',
-        label: 'Label'
+        label: 'العنوان'
       },
       {
         type: 'textfield',
         input: true,
         key: 'key',
-        label: 'Key',
+        label: 'المفتاح',
         allowCalculateOverride: true,
         calculateValue: { _camelCase: [{ var: 'row.label' }] }
       }

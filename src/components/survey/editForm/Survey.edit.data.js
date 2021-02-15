@@ -6,21 +6,21 @@ export default [
   {
     type: 'datagrid',
     input: true,
-    label: 'Questions',
+    label: 'الاسئلة',
     key: 'questions',
-    tooltip: 'The questions you would like to ask in this survey question.',
+    tooltip: 'الاسئلة التي تود طرحها فى هذا الاستبيان',
     weight: 0,
     reorder: true,
     defaultValue: [{ label: '', value: '' }],
     components: [
       {
-        label: 'Label',
+        label: 'النص',
         key: 'label',
         input: true,
         type: 'textfield'
       },
       {
-        label: 'Value',
+        label: 'القيمة',
         key: 'value',
         input: true,
         type: 'textfield',
@@ -32,21 +32,21 @@ export default [
   {
     type: 'datagrid',
     input: true,
-    label: 'Values',
+    label: 'القيم',
     key: 'values',
-    tooltip: 'The values that can be selected per question. Example: \'Satisfied\', \'Very Satisfied\', etc.',
+    tooltip: 'القيم الذي سيتم الخيار منها',
     weight: 1,
     reorder: true,
     defaultValue: [{ label: '', value: '' }],
     components: [
       {
-        label: 'Label',
+        label: 'النص',
         key: 'label',
         input: true,
         type: 'textfield'
       },
       {
-        label: 'Value',
+        label: 'القيمة',
         key: 'value',
         input: true,
         type: 'textfield',
