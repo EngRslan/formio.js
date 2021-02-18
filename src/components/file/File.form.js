@@ -16,7 +16,7 @@ export default function(...extend) {
       components: FileEditData
     },
     {
-      label: 'File',
+      label: 'ملف',
       key: 'file',
       weight: 5,
       components: FileEditFile

@@ -6,10 +6,10 @@ export default [
     type: 'select',
     input: true,
     key: 'storage',
-    label: 'Storage',
-    placeholder: 'Select your file storage provider',
+    label: 'المخزن',
+    placeholder: 'اختر مخزن الملفات',
     weight: 0,
-    tooltip: 'Which storage to save the files in.',
+    tooltip: 'الي اي مخزن سوف يتم رفع الملفات',
     valueProperty: 'value',
     dataSrc: 'custom',
     data: {
@@ -25,10 +25,10 @@ export default [
     type: 'textfield',
     input: true,
     key: 'url',
-    label: 'Url',
+    label: 'رابط المخزن',
     weight: 10,
-    placeholder: 'Enter the url to post the files to.',
-    tooltip: "See <a href='https://github.com/danialfarid/ng-file-upload#server-side' target='_blank'>https://github.com/danialfarid/ng-file-upload#server-side</a> for how to set up the server.",
+    placeholder: 'ادخل الرابط الذي سوف يتم ارسال الملفات اليه',
+    tooltip: "انظر <a href='https://github.com/danialfarid/ng-file-upload#server-side' target='_blank'>https://github.com/danialfarid/ng-file-upload#server-side</a> لمعرفة كيف تقوم باستقبال الملفات فى الخادم.",
     conditional: {
       json: { '===': [{ var: 'data.storage' }, 'url'] }
     }
@@ -72,8 +72,7 @@ export default [
   {
     type: 'textarea',
     key: 'options',
-    label: 'Custom request options',
-    tooltip: 'Pass your custom xhr options(optional)',
+    label: 'العناصر الاضافة فى الريكوست المرسل',
     rows: 5,
     editor: 'ace',
     input: true,
@@ -93,10 +92,10 @@ export default [
     type: 'textfield',
     input: true,
     key: 'fileKey',
-    label: 'File form-data key',
+    label: 'المفتاح',
     weight: 17,
-    placeholder: 'Enter the key name of a file for form data.',
-    tooltip: 'Key name that you would like to modify for the file while calling API request.',
+    placeholder: 'ادخل المفتاح الذي سيحمل الملف الي الخادم داخل الفورم',
+    tooltip: 'اسم المفتاح الذي سوف يرسل الملف به الى الخادم',
     conditional: {
       json: {
         '===': [{
@@ -109,34 +108,34 @@ export default [
     type: 'textfield',
     input: true,
     key: 'dir',
-    label: 'Directory',
-    placeholder: '(optional) Enter a directory for the files',
-    tooltip: 'This will place all the files uploaded in this field in the directory',
+    label: 'المجلد',
+    placeholder: 'اسم المجلد الذي سيتم حفظ الملف به - اختياري',
+    tooltip: 'هذا الخيار سوف يرسل الي الخدمة لحفظ الملف بناءا على هذا المجلد',
     weight: 20
   },
   {
     type: 'textfield',
     input: true,
     key: 'fileNameTemplate',
-    label: 'File Name Template',
-    placeholder: '(optional) {{{name}}-{{guid}}}}}',
-    tooltip: 'Specify template for name of uploaded file(s). Regular template variables are available (`data`, `component`, `user`, `value`, `moment` etc.), also `fileName`, `guid` variables are available. `guid` part must be present, if not found in template, will be added at the end.',
+    label: 'هيكلة اسم الملف',
+    placeholder: '(اختياري) {{name}}-{{guid}}',
+    tooltip: 'تحديد هيكل اسم الملف الذي سوف يرسل الى الخادم يمكن استخدام المتغيرات (`data`, `component`, `user`, `value`, `moment` وهكذا.), ايضا المتغيرات `fileName`, `guid` متاحة. `guid` لابد من وجود, فى حالة عدم وجودة سيتم اضافة فى اخر اسم الملف لضمان عدم تكرار اسم الملف.',
     weight: 25
   },
   {
     type: 'checkbox',
     input: true,
     key: 'image',
-    label: 'Display as image(s)',
-    tooltip: 'Instead of a list of linked files, images will be rendered in the view.',
+    label: 'معاينة الملفات كصور',
+    tooltip: 'بدلا من ظهر الملفات كقائمة بروابط سوف تظهر معاينة الصور',
     weight: 30
   },
   {
     type: 'checkbox',
     input: true,
     key: 'uploadOnly',
-    label: 'Upload Only',
-    tooltip: 'When this is checked, will only allow you to upload file(s) and consequently the download, in this component, will be unavailable.',
+    label: 'رفع فقط',
+    tooltip: 'عند تحديد هذا الخيار سوف تستطيع فقط برفع الملفات ولكن التنزيل لن يكون متاح',
     weight: 33,
   },
   {
@@ -146,6 +145,7 @@ export default [
     label: 'Private Download',
     tooltip: 'When this is checked, the file download will send a POST request to the download URL with the x-jwt-token header. This will allow your endpoint to create a Private download system.',
     weight: 31,
+    ignore: true,
     conditional: {
       json: { '===': [{ var: 'data.storage' }, 'url'] }
     }
@@ -154,9 +154,9 @@ export default [
     type: 'textfield',
     input: true,
     key: 'imageSize',
-    label: 'Image Size',
+    label: 'حجم المعاينة',
     placeholder: '100',
-    tooltip: 'The image size for previewing images.',
+    tooltip: 'حجم معاينة الصورة',
     weight: 40,
     conditional: {
       json: { '==': [{ var: 'data.image' }, true] }
@@ -166,17 +166,17 @@ export default [
     type: 'checkbox',
     input: true,
     key: 'webcam',
-    label: 'Enable web camera',
-    tooltip: 'This will allow using an attached camera to directly take a picture instead of uploading an existing file.',
+    label: 'السماح باستخدام الكاميرا',
+    tooltip: 'عند تحديد هذا الخيار سيتم استخدام الكاميرا مباشرة دون اظهار مربع اختيار الملفات',
     weight: 32
   },
   {
     type: 'textfield',
     input: true,
     key: 'webcamSize',
-    label: 'Webcam Width',
+    label: 'حجم عرض صورة الكاميرا',
     placeholder: '320',
-    tooltip: 'The webcam size for taking pictures.',
+    tooltip: 'حجم الصور الملتقطة بواسطة الكاميرا',
     weight: 38,
     conditional: {
       json: { '==': [{ var: 'data.webcam' }, true] }
@@ -185,19 +185,19 @@ export default [
   {
     type: 'datagrid',
     input: true,
-    label: 'File Types',
+    label: 'انواع الملفات',
     key: 'fileTypes',
-    tooltip: 'Specify file types to classify the uploads. This is useful if you allow multiple types of uploads but want to allow the user to specify which type of file each is.',
+    tooltip: 'تحديد انواع الملفات وذلك لجعل المستخدم يحدد ماهية نوع الملف المرفوع وذلك لتصنيفها',
     weight: 11,
     components: [
       {
-        label: 'Label',
+        label: 'النص',
         key: 'label',
         input: true,
         type: 'textfield'
       },
       {
-        label: 'Value',
+        label: 'القيمة',
         key: 'value',
         input: true,
         type: 'textfield'
@@ -208,27 +208,27 @@ export default [
     type: 'textfield',
     input: true,
     key: 'filePattern',
-    label: 'File Pattern',
+    label: 'نمط الملفات المسموحة',
     placeholder: '.jpg,video/*,application/pdf',
-    tooltip: 'See <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> for how to specify file patterns.',
+    tooltip: 'انظر <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> لمعرفة كيف تحدد الانماط.',
     weight: 50
   },
   {
     type: 'textfield',
     input: true,
     key: 'fileMinSize',
-    label: 'File Minimum Size',
+    label: 'اقل حجم مسموح للملف',
     placeholder: '1MB',
-    tooltip: 'See <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> for how to specify file sizes.',
+    tooltip: 'انظر <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> لمعرفة كيف تحدد الاحجام.',
     weight: 60
   },
   {
     type: 'textfield',
     input: true,
     key: 'fileMaxSize',
-    label: 'File Maximum Size',
+    label: 'اكبر حجم مسموح به للملف',
     placeholder: '10MB',
-    tooltip: 'See <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> for how to specify file sizes.',
+    tooltip: 'انظر <a href=\'https://github.com/danialfarid/ng-file-upload#full-reference\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#full-reference</a> لمعرفة كيف تحدد الاحجام.',
     weight: 70
   },
 ];

@@ -40,7 +40,7 @@ export default class FileComponent extends Field {
   static schema(...extend) {
     return Field.schema({
       type: 'file',
-      label: 'Upload',
+      label: 'رفع ملف',
       key: 'file',
       image: false,
       privateDownload: false,
@@ -54,7 +54,7 @@ export default class FileComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'File',
+      title: 'ملف',
       group: 'premium',
       icon: 'file',
       documentation: '/userguide/#file',

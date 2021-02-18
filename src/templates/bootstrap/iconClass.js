@@ -20,10 +20,13 @@ export default (iconset, name, spinning) => {
         name = 'window-restore';
         break;
       case 'move':
-        name = 'arrows';
+        name = 'arrows-alt';
         break;
       case 'time':
         name = 'clock';
+        break;
+        case 'remove':
+        name = 'trash';
         break;
     }
   }

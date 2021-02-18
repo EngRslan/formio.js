@@ -84,9 +84,9 @@ const url = (formio) => {
     uploadFile(file, name, dir, progressCallback, url, options, fileKey, groupPermissions, groupId, abortCallback) {
       const uploadRequest = function(form) {
         return xhrRequest(url, name, {
-          baseUrl: encodeURIComponent(formio.projectUrl),
-          project: form ? form.project : '',
-          form: form ? form._id : ''
+          //baseUrl: encodeURIComponent(formio.projectUrl),
+          //project: form ? form.project : '',
+          //form: form ? form._id : ''
         }, {
           [fileKey]:file,
           name,
