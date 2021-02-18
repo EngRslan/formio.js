@@ -22,5 +22,5 @@ const azure = (formio) => ({
   }
 });
 
-azure.title = 'Azure File Services';
+azure.title = 'مركز ملفات Azure';
 export default azure;

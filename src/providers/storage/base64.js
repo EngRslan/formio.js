@@ -30,5 +30,5 @@ const base64 = () => ({
   }
 });
 
-base64.title = 'Base64';
+base64.title = 'تضمين داخل بيانات النموذج Base64';
 export default base64;
