@@ -8,7 +8,7 @@ export default class ButtonComponent extends Field {
   static schema(...extend) {
     return Input.schema({
       type: 'button',
-      label: 'زر حفظ',
+      label: 'زر',
       key: 'submit',
       size: 'md',
       leftIcon: '',
@@ -24,7 +24,7 @@ export default class ButtonComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'زر حفظ',
+      title: 'زر',
       group: 'basic',
       icon: 'stop',
       documentation: '/userguide/#button',

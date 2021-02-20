@@ -634,7 +634,7 @@ export default class SelectComponent extends Field {
           return;
         }
 
-        let resourceUrl = this.options.formio ? this.options.formio.formsUrl : `${Formio.getProjectUrl()}/form`;
+        let resourceUrl = this.options.formio ? this.options.formio.formsUrl : `${Formio.getProjectUrl()}/lookups`;
         resourceUrl += (`/${this.component.data.resource}/submission`);
 
         if (forceUpdate || this.additionalResourcesAvailable || !this.serverCount) {
